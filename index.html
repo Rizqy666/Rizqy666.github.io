@@ -19,9 +19,7 @@
         .page {
             display: none;
             max-height: calc(100vh - 64px);
-            /* Sesuaikan dengan tinggi navbar Anda */
             overflow-y: auto;
-            /* Tampilkan scrollbar ketika konten meluap */
         }
 
         .active {
@@ -30,21 +28,16 @@
 
         .hero {
             min-height: 100vh;
-            /* Pastikan setiap bagian mengambil tinggi penuh */
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
-        /* Tambahkan ini untuk memberikan konten Portfolio lebih leluasa */
         #portfolio {
             display: flex;
             flex-direction: column;
-            /* Menjaga konten tetap rapi */
             align-items: center;
-            /* Pusatkan konten secara horizontal */
             padding: 20px;
-            /* Tambahkan padding jika perlu */
         }
     </style>
 </head>
@@ -242,7 +235,6 @@
 
 
     <script>
-        // SPA Routing menggunakan hash
         function navigateToPage() {
             const hash = window.location.hash.substring(1) || "home";
             showPage(hash);
@@ -251,33 +243,25 @@
 
         links.forEach((link) => {
             link.addEventListener("click", function(event) {
-                // Hentikan aksi default
                 event.preventDefault();
-
-                // Sembunyikan semua bagian
                 document.querySelectorAll(".hero").forEach((section) => {
                     section.style.display = "none";
                 });
-
-                // Tampilkan bagian yang sesuai
                 const targetId = this.getAttribute("href");
                 document.querySelector(targetId).style.display = "flex";
             });
         });
 
         function showPage(page) {
-            // Sembunyikan semua halaman
             document.querySelectorAll(".page").forEach((content) => {
                 content.classList.remove("active");
             });
 
-            // Tampilkan halaman yang sesuai
             const pageContent = document.getElementById(page);
             if (pageContent) {
                 pageContent.classList.add("active");
             }
 
-            // Update link aktif
             document.querySelectorAll(".nav a").forEach((navLink) => {
                 navLink.classList.remove("font-bold");
                 if (navLink.getAttribute("href").includes(`#${page}`)) {
@@ -289,7 +273,6 @@
         window.addEventListener("hashchange", navigateToPage);
         window.addEventListener("load", navigateToPage);
 
-        // Efek mengetik untuk peran
         const roles = [
             "Fullstack Developer Laravel",
             "Developer FiveM",
@@ -325,7 +308,7 @@
                 } else {
                     clearInterval(deletingInterval);
                     roleIndex = (roleIndex + 1) % roles.length;
-                    setTimeout(typeRole, 500); // Delay sebelum mengetik peran berikutnya
+                    setTimeout(typeRole, 500);
                 }
             }, 100);
         }
