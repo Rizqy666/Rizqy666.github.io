@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="asset/img/favicon.ico" type="image/x-icon">
+    <title>Portofolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .page {
+            display: none;
+            max-height: calc(100vh - 64px);
+            /* Sesuaikan dengan tinggi navbar Anda */
+            overflow-y: auto;
+            /* Tampilkan scrollbar ketika konten meluap */
+        }
+
+        .active {
+            display: block;
+        }
+
+        .hero {
+            min-height: 100vh;
+            /* Pastikan setiap bagian mengambil tinggi penuh */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Tambahkan ini untuk memberikan konten Portfolio lebih leluasa */
+        #portfolio {
+            display: flex;
+            flex-direction: column;
+            /* Menjaga konten tetap rapi */
+            align-items: center;
+            /* Pusatkan konten secara horizontal */
+            padding: 20px;
+            /* Tambahkan padding jika perlu */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 nav">
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#portfolio">Portofolio</a></li>
+                        <li><a href="#about">Tentang Saya</a></li>
+                    </ul>
+                </div>
+                <a class="btn btn-ghost text-xl">rizqy;</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1 nav">
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#portfolio">Portofolio</a></li>
+                    <li><a href="#about">Tentang Saya</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <a href="https://github.com/Rizqy666" target="_blank" class="btn btn-ghost btn-circle avatar">
+                    <div class="w-15 h-15 rounded-full overflow-hidden flex items-center justify-center">
+                        <img alt="GitHub" src="https://img.icons8.com/ios11/512/FFFFFF/github.png"
+                            class="object-cover w-full h-full" />
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/in/zaenal-nurrizqy-1195b7103/" target="_blank"
+                    class="btn btn-ghost btn-circle avatar">
+                    <div class="w-10 h-10 rounded-full overflow-hidden flex items-center justify-center">
+                        <img alt="LinkedIn"
+                            src="https://www.pngplay.com/wp-content/uploads/12/LinkedIn-PNG-Pic-Background.png"
+                            class="object-cover w-full h-full" />
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="hero bg-base-200" id="home">
+            <div class="max-w-md text-center">
+                <h6 class="text-1xl font-bold">Halo Dunia, Saya</h6>
+                <h1 class="text-5xl font-bold">Zaenal Nurrizqy</h1>
+                <br />
+                <h1 class="text-3xl font-bold h-10 overflow-hidden" id="typing-text"></h1>
+                <p class="py-6 text-base">Selamat datang di situs pribadi saya.</p>
+            </div>
+        </div>
+        <div class="hero bg-base-200" id="portfolio">
+            <div class="card-body">
+                <section id="deskripsi" class="mb-10"></section>
+                <h2 class="text-4xl font-bold  text-base">Deskripsi</h2>
+                <div class="flex flex-col md:flex-row mt-6">
+                    <div class="flex-1">
+                        <p class=" text-base">
+                            Untuk pengalaman dibidang pemrograman saya memiliki beberapa project dimana saya menggunakan
+                            Laravel dan MySQL,
+                            selain itu juga menggunakan PHP native, dengan library css bootstrap 5, dan blade templating
+                            engine. Untuk pengelamana dibidang IT Support mungkin saya memiliki keterampilan yang pernah
+                            saya dapatkan ketika kuliah, mulai dari troubleshooting hardware maupun software.
+                        </p>
+                    </div>
+                </div>
+                </section>
+                <section id="projects" class="mb-10">
+                    <h2 class="text-4xl font-bold  text-base">Proyek</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+                        <div class="card bg-base-100 shadow-lg p-4">
+                            <h3 class="text-4xl font-bold  text-base">Skripsi</h3>
+                            <p class="mt-2 text-base">
+                                Rancang bangun website Pengelolaan data siswa berbasis web, dimana saya membuatnya
+                                menggunakan php native dengan template bootstrap.
+                            </p>
+                        </div>
+                        <div class="card bg-base-100 shadow-lg p-4">
+                            <h3 class="text-4xl font-bold  text-base">Skripsi</h3>
+                            <p class="mt-2 text-base">
+                                Membantu pengembangan website inventory konveksi dan POS sederhana dengan menggunakan
+                                PHP native dan template bootstrap 5.
+                            </p>
+                        </div>
+                        <div class="card bg-base-100 shadow-lg p-4">
+                            <h3 class="text-4xl font-bold  text-base">Skripsi</h3>
+                            <p class="mt-2 text-base">
+                                Membantu pengembangan website pendaftaran dan penerimaan kaeyawan baru di peusahaan TSI.
+                            </p>
+                        </div>
+                        <div class="card bg-base-100 shadow-lg p-4">
+                            <h3 class="text-4xl font-bold  text-base">Project</h3>
+                            <p class="mt-2 text-base">
+                                Rancang bangun website inventory & POS untuk Apotek Bebedilan Tasikmalaya, menggunakan
+                                Laravel dan templating engine.
+                            </p>
+                        </div>
+                        <div class="card bg-base-100 shadow-lg p-4">
+                            <h3 class="text-4xl font-bold  text-base">Troubleshooting Device</h3>
+                            <p class="mt-2 text-base">
+                                Membantu troubleshooting hardware Komputer, leptop, printer, dan lain-lain.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="card hero bg-base-200 page pt-20" id="about">
+            <div class="card-body">
+                <header class="text-center mb-10 z-10 relative">
+                    <p class="text-5xl font-bold">Zaenal Nurrizqy</p>
+                    <p class="mt-4 text-lg  text-base">
+                        Lulusan S1 Sistem Informasi | Universitas Komputer Indonesia
+                    </p>
+                </header>
+                <section id="about" class="mb-10">
+                    <h2 class="text-4xl font-bold  text-base">Tentang Saya</h2>
+                    <div class="flex flex-col md:flex-row mt-6">
+                        <div class="flex-1 flex items-center justify-center md:mr-6">
+                            <figure class="w-48 h-48 overflow-hidden rounded-full shadow-lg">
+                                <img src="asset/img/pas.png" alt="Profil Saya" class="object-cover w-full h-full" />
+                            </figure>
+                        </div>
+                        <div class="flex-1">
+                            <p class=" text-base">
+                                Sebagai lulusan S1 Sistem Informasi tahun 2023 dari
+                                Universitas Komputer Indonesia, saya memiliki pengalaman dalam
+                                mengembangkan proyek website menggunakan Laravel dan
+                                keterampilan pemrograman dan beberapa keahlian dalam bidang IT Support hardware maupun
+                                software. Saya cepat
+                                beradaptasi
+                                dengan teknologi baru dan memiliki integritas dalam setiap
+                                pekerjaan yang saya lakukan.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section id="skills" class="mb-10">
+                    <h2 class="text-4xl font-bold  text-base">Keahlian</h2>
+                    <ul class="list-disc list-inside mt-4  text-base">
+                        <li>Pengembangan Web (Full Stack Laravel)</li>
+                        <li>IT Hardware Support</li>
+                        <li>Troubleshooting Hardware</li>
+                        <li>Version Control (GitHub)</li>
+                        <li>Komunikasi yang Baik dan Kerja Tim</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // SPA Routing menggunakan hash
+        function navigateToPage() {
+            const hash = window.location.hash.substring(1) || "home";
+            showPage(hash);
+        }
+        const links = document.querySelectorAll(".nav a");
+
+        links.forEach((link) => {
+            link.addEventListener("click", function(event) {
+                // Hentikan aksi default
+                event.preventDefault();
+
+                // Sembunyikan semua bagian
+                document.querySelectorAll(".hero").forEach((section) => {
+                    section.style.display = "none";
+                });
+
+                // Tampilkan bagian yang sesuai
+                const targetId = this.getAttribute("href");
+                document.querySelector(targetId).style.display = "flex";
+            });
+        });
+
+        function showPage(page) {
+            // Sembunyikan semua halaman
+            document.querySelectorAll(".page").forEach((content) => {
+                content.classList.remove("active");
+            });
+
+            // Tampilkan halaman yang sesuai
+            const pageContent = document.getElementById(page);
+            if (pageContent) {
+                pageContent.classList.add("active");
+            }
+
+            // Update link aktif
+            document.querySelectorAll(".nav a").forEach((navLink) => {
+                navLink.classList.remove("font-bold");
+                if (navLink.getAttribute("href").includes(`#${page}`)) {
+                    navLink.classList.add("font-bold");
+                }
+            });
+        }
+
+        window.addEventListener("hashchange", navigateToPage);
+        window.addEventListener("load", navigateToPage);
+
+        // Efek mengetik untuk peran
+        const roles = [
+            "Fullstack Developer Laravel",
+            "Developer FiveM",
+            "IT Support",
+        ];
+        let roleIndex = 0;
+        const typingText = document.getElementById("typing-text");
+
+        function typeRole() {
+            let role = roles[roleIndex];
+            let charIndex = 0;
+
+            let typingInterval = setInterval(() => {
+                if (charIndex < role.length) {
+                    typingText.textContent += role[charIndex];
+                    charIndex++;
+                } else {
+                    clearInterval(typingInterval);
+                    setTimeout(() => {
+                        deleteRole(role.length);
+                    }, 2000);
+                }
+            }, 100);
+        }
+
+        function deleteRole(length) {
+            let charIndex = length;
+
+            let deletingInterval = setInterval(() => {
+                if (charIndex > 0) {
+                    typingText.textContent = typingText.textContent.slice(0, -1);
+                    charIndex--;
+                } else {
+                    clearInterval(deletingInterval);
+                    roleIndex = (roleIndex + 1) % roles.length;
+                    setTimeout(typeRole, 500); // Delay sebelum mengetik peran berikutnya
+                }
+            }, 100);
+        }
+
+        typeRole();
+    </script>
+</body>
+
+</html>
