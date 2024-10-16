@@ -1,282 +1,402 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="asset/img/favicon.ico" type="image/x-icon">
-    <title>Portofolio</title>
+    <title>Portfolio Zaenal Nurrizqy</title>
+    <link rel="shortcut icon" href="asset/favicon.ico" type="image/x-icon" />
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        html,
-        body {
-            height: 100%;
-            margin: 0;
-            overflow: hidden;
-        }
-
-        .page {
-            display: none;
-            max-height: calc(100vh - 64px);
-            overflow-y: auto;
-        }
-
-        .active {
-            display: block;
-        }
-
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        #portfolio {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-    </style>
+    <script src="https://kit.fontawesome.com/aa43f84675.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="container mx-auto">
-        <div class="navbar bg-base-100">
+    <div class="container max-w-screen-xl mx-auto">
+        <section class="navbar bg-base-100">
             <div class="navbar-start">
                 <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <button tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M4 6h16M4 12h8m-8 6h16" />
                         </svg>
-                    </div>
+                    </button>
                     <ul tabindex="0"
-                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 nav">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#about">About</a></li>
+                        class="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 z-[1]">
+                        <li>
+                            <a href="#home"><i class="fa-solid fa-house"></i> Home</a>
+                        </li>
+                        <li>
+                            <a href="#about"><i class="fa-solid fa-user"></i> About</a>
+                        </li>
+                        <li>
+                            <a href="#portfolio"><i class="fa-solid fa-briefcase"></i> Portfolio</a>
+                        </li>
+
                     </ul>
                 </div>
-                <a class="btn btn-ghost text-xl">rizqy;</a>
+                <a class="btn btn-ghost text-xl">
+                    <span class="loading loading-infinity loading-lg"></span> rizqy;
+                </a>
             </div>
             <div class="navbar-center hidden lg:flex">
-                <ul class="menu menu-horizontal px-1 nav">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#about">About</a></li>
+                <ul class="menu menu-horizontal px-1">
+                    <li>
+                        <a href="#home"><i class="fa-solid fa-house"></i> Home</a>
+                    </li>
+                    <li>
+                        <a href="#about"><i class="fa-solid fa-user"></i> About</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio"><i class="fa-solid fa-briefcase"></i> Portfolio</a>
+                    </li>
+
                 </ul>
             </div>
             <div class="navbar-end">
-                <a href="https://github.com/Rizqy666" target="_blank" class="btn btn-ghost btn-circle avatar">
-                    <div class="w-15 h-15 rounded-full overflow-hidden flex items-center justify-center">
-                        <img alt="GitHub" src="https://img.icons8.com/ios11/512/FFFFFF/github.png"
-                            class="object-cover w-full h-full" />
-                    </div>
-                </a>
-                <a href="https://www.linkedin.com/in/zaenal-nurrizqy-1195b7103/" target="_blank"
-                    class="btn btn-ghost btn-circle avatar">
-                    <div class="w-10 h-10 rounded-full overflow-hidden flex items-center justify-center">
-                        <img alt="LinkedIn"
-                            src="https://www.pngplay.com/wp-content/uploads/12/LinkedIn-PNG-Pic-Background.png"
-                            class="object-cover w-full h-full" />
-                    </div>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=zaenal.nurrizqy666@gmail.com"
+                    class="btn btn-error text-white font-bold" target="_blank">
+                    <i class="fa-regular fa-message"></i> Hiring
                 </a>
             </div>
-        </div>
 
-        <div class="hero bg-base-200" id="home">
-            <div class="max-w-md text-center">
-                <h6 class="text-1xl font-bold">Halo World, I</h6>
-                <h1 class="text-5xl font-bold">Zaenal Nurrizqy</h1>
-                <br />
-                <h1 class="text-3xl font-bold h-10 overflow-hidden" id="typing-text"></h1>
-                <p class="py-6 text-base">Welcome to my personal site.</p>
-            </div>
-        </div>
-        <div class="hero bg-base-200" id="portfolio">
-            <div class="card-body">
-                <section id="deskripsi" class="mb-10"></section>
-                <h2 class="text-4xl font-bold  text-base">Deskripsi</h2>
-                <div class="flex flex-col md:flex-row mt-6">
-                    <div class="flex-1">
-                        <p class=" text-base">
-                            Untuk pengalaman dibidang pemrograman saya memiliki beberapa project dimana saya menggunakan
-                            Laravel dan MySQL,
-                            selain itu juga menggunakan PHP native, dengan library css bootstrap 5, dan blade templating
-                            engine. Untuk pengelamana dibidang IT Support mungkin saya memiliki keterampilan yang pernah
-                            saya dapatkan ketika kuliah, mulai dari troubleshooting hardware maupun software.
-                        </p>
+
+        </section>
+
+        <section id="home" class="hero h-screen flex items-center justify-center">
+            <div class="hero-content flex-col lg:flex-row items-center justify-center h-full p-4 lg:p-0">
+                <div class="w-full sm:w-1/2 lg:w-1/3 relative">
+                    <div class="skeleton absolute inset-0 rounded-lg"></div>
+                    <img src="asset/img/Prof.png"
+                        class="w-full max-w-xs lg:max-w-sm rounded-lg shadow-2xl mx-auto hidden" alt="Profile Picture"
+                        onload="this.classList.remove('hidden'); this.previousElementSibling.style.display='none';" />
+                </div>
+
+                <div class="card w-full sm:w-1/2 lg:w-2/3 lg:ml-10 text-center lg:text-left mt-6 lg:mt-0">
+                    <h1 class="text-2xl md:text-3xl text-yellow-500 font-bold py-2">
+                        Hallo World, I Zaenal Nurrizqy
+                    </h1>
+                    <h3 class="text-2xl md:text-3xl font-bold overflow-hidden h-10" id="typing-text"></h3>
+                    <p class="py-2 text-sm md:text-base text-justify">
+                        Saya seorang IT Support yang berperan dalam menangani masalah
+                        teknis dan menjaga kelancaran sistem perusahaan baik hardware
+                        maupun software. Selain itu, saya juga seorang Full Stack
+                        Developer dengan spesialisasi pada Laravel, mampu mengembangkan
+                        aplikasi web yang handal dan modern. Di bidang gaming, saya
+                        berperan sebagai Developer FiveM, mengelola server modifikasi GTA
+                        V dan integrasi fitur khusus untuk komunitas.
+                    </p>
+                    <div class="py-6 flex items-center justify-center lg:justify-start space-x-4">
+                        <a href="https://github.com/Rizqy666" target="_blank" class="btn btn-ghost btn-circle avatar">
+                            <div class="w-18 h-18 rounded-full overflow-hidden">
+                                <img alt="github" src="https://img.icons8.com/m_rounded/512/FFFFFF/github.png"
+                                    class="object-cover w-full h-full" />
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/zaenal-nurrizqy-1195b7103/" target="_blank"
+                            class="btn btn-ghost btn-circle avatar">
+                            <div class="w-10 h-10 rounded-full overflow-hidden">
+                                <img alt="LinkedIn"
+                                    src="https://www.pngplay.com/wp-content/uploads/12/LinkedIn-PNG-Pic-Background.png"
+                                    class="object-cover w-full h-full" />
+                            </div>
+                        </a>
+                        <a href="https://wa.me/6289661141422" target="_blank" class="btn btn-ghost btn-circle avatar">
+                            <div class="w-10 h-10 rounded-full overflow-hidden">
+                                <img alt="WhatsApp"
+                                    src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/whatsapp-white-icon.png"
+                                    class="object-cover w-full h-full" />
+                            </div>
+                        </a>
                     </div>
                 </div>
-                </section>
-                <section id="projects" class="mb-10">
-                    <h2 class="text-4xl font-bold  text-base">Proyek</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-
-                        <div class="card bg-base-100 shadow-lg p-4">
-                            <h3 class="card-header font-bold  text-base">Sistem Informasi Inventory dan Manajemen Stok
-                                Barang (Magang)</h3>
-                            <div class="card-body">
-                                <p class="mt-2 text-base">
-                                    Membantu pengembangan website inventory konveksi dan POS sederhana dengan
-                                    menggunakan
-                                    PHP native dan template bootstrap 5.
-                                </p>
-                            </div>
-                            <div class="card-footer text-right mt-auto">
-                                Agustus 2022 - September 2022
-                            </div>
-                        </div>
-                        <div class="card bg-base-100 shadow-lg p-4">
-                            <h3 class="card-header text-4xl font-bold text-base">Sistem Informasi Pengelolaan Data Siswa
-                                di SMKN 1 Kuningan (Skripsi)</h3>
-                            <div class="card-body">
-                                <p class="mt-2 text-base">
-                                    Rancang bangun website Pengelolaan data siswa berbasis web, dimana saya membuatnya
-                                    menggunakan php native dengan template bootstrap.
-                                </p>
-                            </div>
-                            <div class="card-footer text-right mt-auto">
-                                Maret 2023 - September 2023
-                            </div>
-                        </div>
-                        <div class="card bg-base-100 shadow-lg p-4">
-                            <h3 class="card-header font-bold  text-base">Sistem Informasi Penerimaan Karyawan Baru
-                                (Skripsi)</h3>
-                            <div class="card-body">
-
-                                <p class="mt-2 text-base">
-                                    Membantu pengembangan website pendaftaran dan penerimaan kaeyawan baru di peusahaan
-                                    TSI.
-                                </p>
-                            </div>
-                            <div class="card-footer text-right mt-auto">
-                                Maret 2023 - September 2023
-                            </div>
-                        </div>
-                        <div class="card bg-base-100 shadow-lg p-4">
-                            <h3 class="card-header text-4xl font-bold  text-base">Project POS dan Manajemen Stok Obat
-                            </h3>
-                            <div class="card-body">
-                                <p class="mt-2 text-base">
-                                    Rancang bangun website inventory & POS untuk Apotek Bebedilan Tasikmalaya,
-                                    menggunakan
-                                    Laravel dan templating engine.
-                                </p>
-                            </div>
-                            <div class="card-footer text-right mt-auto">
-                                Januari 2024 - Februari 2023
-                            </div>
-                        </div>
-                        <div class="card bg-base-100 shadow-lg p-4">
-                            <h3 class="card-header text-4xl font-bold  text-base">Troubleshooting Device</h3>
-                            <div class="card-body">
-                                <p class="mt-2 text-base">
-                                    Troubleshooting hardware Komputer, leptop, printer, dan lain-lain.
-                                </p>
-                            </div>
-                            <div class="card-footer text-right mt-auto">
-                                2020 - Sekarang
-                            </div>
-                        </div>
-                    </div>
-                </section>
             </div>
-        </div>
+        </section>
+        <section class="timeline timeline-vertical" id="about">
+            <div class="card">
+                <h1 class="card-title font-bold text-3xl items-center justify-center py-2">
+                    About Us
+                </h1>
+                <hr class="w-1/2 mx-auto my-4" />
+                <div class="card-body">
+                    <div class="card">
+                        <div class="card-body space-y-4">
+                            <h2 class="text-lg font-bold text-white-500">
+                                Tentang Saya
+                            </h2>
 
-        <div class="card hero bg-base-200 page pt-20" id="about">
-            <div class="card-body">
-                <header class="text-center mb-10 z-10 relative">
-                    <p class="text-5xl font-bold">Zaenal Nurrizqy</p>
-                    <p class="mt-4 text-lg  text-base">
-                        Lulusan S1 Sistem Informasi | Universitas Komputer Indonesia
-                    </p>
-                </header>
-                <section id="about" class="mb-10">
-                    <h2 class="text-4xl font-bold  text-base">Tentang Saya</h2>
-                    <div class="flex flex-col md:flex-row mt-6">
-
-                        <div class="flex-1">
-                            <p class=" text-base">
-                                Sebagai lulusan S1 Sistem Informasi tahun 2023 dari
-                                Universitas Komputer Indonesia, saya memiliki pengalaman dalam
-                                mengembangkan proyek website menggunakan Laravel dan
-                                keterampilan pemrograman dan beberapa keahlian dalam bidang IT Support hardware maupun
-                                software. Saya cepat
-                                beradaptasi
-                                dengan teknologi baru dan memiliki integritas dalam setiap
-                                pekerjaan yang saya lakukan.
+                            <p class="text-base text-justify leading-relaxed">
+                                Saya adalah seorang yang bergelut di bidang <strong>IT Support</strong> berpengalaman
+                                yang berfokus
+                                pada penyelesaian masalah teknis, pemeliharaan sistem, dan dukungan teknologi di
+                                lingkungan perusahaan. Dengan keahlian kuat dalam troubleshooting perangkat keras dan
+                                perangkat lunak, saya memastikan operasional teknologi berjalan <em>lancar dan
+                                    efisien</em>.
                             </p>
+
+                            <h3 class="text-lg font-bold text-white-500">
+                                Keahlian Saya
+                            </h3>
+
+                            <ul class="list-disc pl-5 text-base leading-relaxed">
+                                <li><strong>IT Support:</strong> Mengelola dan memelihara sistem perangkat keras dan
+                                    perangkat lunak di lingkungan perusahaan.</li>
+                                <li><strong>Full Stack Developer:</strong> Spesialisasi dalam framework Laravel, saya
+                                    mengembangkan aplikasi web dari backend hingga frontend yang
+                                    <em>user-friendly</em>.
+                                </li>
+                                <li><strong>Developer FiveM:</strong> Mengelola server modifikasi GTA V dengan
+                                    scripting, pengelolaan server, serta integrasi fitur untuk komunitas gaming.</li>
+                            </ul>
                         </div>
-                        <div class="flex-1 flex items-center justify-center md:mr-6">
-                            <figure class="w-48 h-48 overflow-hidden rounded-full shadow-lg">
-                                <img src="asset/img/pas.png" alt="Profil Saya" class="object-cover w-full h-full" />
-                            </figure>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section id="portfolio">
+            <h1 class="card-title font-bold text-3xl items-center justify-center py-2">
+                Pengalaman dibidang IT
+            </h1>
+            <hr class="w-1/2 mx-auto my-4" />
+            <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+                <li>
+                    <hr />
+                    <div class="timeline-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                            class="h-5 w-5">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                clip-rule="evenodd" />
+                        </svg>
+
+                    </div>
+                    <div class="timeline-start mb-10 md:text-end">
+                        <time class="font-mono italic">2020 - Sekarang</time>
+                        <div class="text-lg font-black">Troubleshooting Hardware dan Software</div>
+                        <div class="mt-2 text-left">
+                            <ul class="list-disc list-inside">
+                                <li>Membangun mini service center untuk beberapa perangkat</li>
+                                <p>mulai dari Leptop, Komputer, Printer, dan lain-lain.</p>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <hr />
+                </li>
+                <li>
+                    <hr />
+                    <div class="timeline-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                            class="h-5 w-5">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="timeline-end mb-10">
+                        <time class="font-mono italic">2020 - 2022</time>
+                        <div class="text-lg font-black">Developer FiveM (GTA 5 Roleplay)</div>
+                        <div class="mt-2 text-left">
+                            <ul class="list-disc list-inside">
+                                <li>Membangun server modifikasi GTA V.</li>
+                                <li>Mengelola server.</li>
+                                <li>Integrasi fitur khusus untuk komunitas.</li>
+                                <li>Monitoring server dari DDOS.</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <hr />
+                </li>
+                <li>
+                    <hr />
+                    <div class="timeline-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                            class="h-5 w-5">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                clip-rule="evenodd" />
+                        </svg>
+
+                    </div>
+                    <div class="timeline-start mb-10 md:text-end">
+                        <time class="font-mono italic">Agustus 2022 - September 2022</time>
+                        <div class="text-lg font-black">Membantu pengembangan website inventori (magang)</div>
+                        <div class="mt-2 text-left">
+                            <ul class="list-disc list-inside">
+                                <li>Menganalisis proses bisnis yang bejalan diperusahaan CFIVE.</li>
+                                <li>Merancang website inventori CFIVE.</li>
+                                <li>Membangun website inventori CFIVE.</li>
+                                <li>Memeliharan website inventori CFIVE.</li>
+                            </ul>
                         </div>
                     </div>
-                </section>
-                <section id="skills" class="mb-10">
-                    <h2 class="text-4xl font-bold  text-base">Keahlian</h2>
-                    <ul class="list-disc list-inside mt-4  text-base">
-                        <li>Pengembangan Web (Full Stack Laravel)</li>
-                        <li>IT Hardware Support</li>
-                        <li>Troubleshooting Hardware</li>
-                        <li>Version Control (GitHub)</li>
-                        <li>Komunikasi yang Baik dan Kerja Tim</li>
-                    </ul>
-                </section>
+                    <hr />
+                </li>
+                <li>
+                    <hr />
+                    <div class="timeline-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                            class="h-5 w-5">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="timeline-end mb-10">
+                        <time class="font-mono italic">Maret 2023 - September 2023</time>
+                        <div class="text-lg font-black">Membangun website Sistem Pengelolaan Data Siswa di SMKN
+                            1 Kuningan (skripsi)</div>
+                        <div class="mt-2 text-left">
+                            <ul class="list-disc list-inside">
+                                <li>Menganalisis proses bisnis yang bejalan di SMKN 1 Kuningan.</li>
+                                <li>Merancang website Sistem Pengelolaan Data Siswa di SMKN 1 Kuningan.</li>
+                                <li>Membangun website Sistem Pengelolaan Data Siswa di SMKN 1 Kuningan.</li>
+                                <li>Mendeploy website Sistem Pengelolaan Data Siswa di SMKN 1 Kuningan.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr />
+                </li>
+                <li>
+                    <hr />
+                    <div class="timeline-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                            class="h-5 w-5">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="timeline-start mb-10 md:text-end">
+                        <time class="font-mono italic">Maret 2023 - September 2023</time>
+                        <div class="text-lg font-black">Membantu pengembangan website tsi.karir.site (skripsi)
+                        </div>
+                        <div class="mt-2 text-left">
+                            <ul class="list-disc list-inside">
+                                <li>Membantu pengembangan website tsi.karir.site.</li>
+                                <li>Mendeploy website tsi.karir.site.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr />
+                </li>
+                <li>
+                    <hr />
+                    <div class="timeline-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                            class="h-5 w-5">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="timeline-end mb-10">
+                        <time class="font-mono italic">Januari 2024 - Februari 2024</time>
+                        <div class="text-lg font-black">Membuat Website Sederhana POS untuk Apotek Bebedilan
+                        </div>
+                        <div class="mt-2 text-left">
+                            <ul class="list-disc list-inside">
+                                <li>Menganalisis proses bisnis yang bejalan di Apotek Bebedilan.</li>
+                                <li>Merancang website Sistem Pengelolaan Data Siswa di Apotek Bebedilan.</li>
+                                <li>Membangun website Sistem Pengelolaan Data Siswa di Apotek Bebedilan.</li>
+                                <li>Mendeploy website Sistem Pengelolaan Data Siswa di Apotek Bebedilan.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="timeline timeline-vertical">
+            <div class="card">
+                <h1 class="card-title font-bold text-3xl items-center justify-center py-2">
+                    Sertifikat
+                </h1>
+                <hr class="w-1/2 mx-auto my-4" />
+                <div class="card-body">
+                    <img src="asset/img/CCNA-awal.jpg" alt="">
+                    <img src="asset/img/CCNA-_Switching.jpg" alt="">
+                    <div class="flex justify-center space-x-4 mt-10">
+                        <label for="my-modal-1" class="cursor-pointer">
+                            <img src="asset/img/1.jpg" alt="Image 1" class="w-4/3">
+                        </label>
+                        <label for="my-modal-2" class="cursor-pointer">
+                            <img src="asset/img/2.jpg" alt="Image 2" class="w-4/3">
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <footer class="footer text-neutral-content items-center p-4">
+                <aside class="grid-flow-col items-center">
+                    <span class="loading loading-infinity loading-lg"></span>
+                    <p>Copyright © 2024 - All right reserved</p>
+                </aside>
+                <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+                    <div class="flex space-x-4 justify-center mt-4">
+                        <a href="https://github.com/Rizqy666" target="_blank"
+                            class="btn btn-ghost btn-circle avatar">
+                            <div class="w-9 h-9 rounded-full overflow-hidden">
+                                <img alt="GitHub" src="https://img.icons8.com/m_rounded/512/FFFFFF/github.png"
+                                    class="object-cover w-full h-full" />
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/zaenal-nurrizqy-1195b7103/" target="_blank"
+                            class="btn btn-ghost btn-circle avatar">
+                            <div class="w-7 h-7 rounded-full overflow-hidden">
+                                <img alt="LinkedIn"
+                                    src="https://www.pngplay.com/wp-content/uploads/12/LinkedIn-PNG-Pic-Background.png"
+                                    class="object-cover w-full h-full" />
+                            </div>
+                        </a>
+                        <a href="https://wa.me/6289661141422" target="_blank"
+                            class="btn btn-ghost btn-circle avatar">
+                            <div class="w-7 h-7 rounded-full overflow-hidden">
+                                <img alt="WhatsApp"
+                                    src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/whatsapp-white-icon.png"
+                                    class="object-cover w-full h-full" />
+                            </div>
+                        </a>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=zaenal.nurrizqy666@gmail.com"
+                            class="btn btn-error text-white font-bold" target="_blank">
+                            <i class="fa-regular fa-message"></i> Conact Us
+                        </a>
+                    </div>
+                </nav>
+            </footer>
+        </section>
+    </div>
+    <input type="checkbox" id="my-modal-1" class="modal-toggle" />
+    <div class="modal">
+        <div class="modal-box">
+            <h2 class="font-bold text-lg">Sertifikat Kompetensi Keahlian Junior Web Pemrogramer</h2>
+            <img src="asset/img/1.jpg" alt="Sertifikat Kompetensi Keahlian Junior Web Pemrogramer" class="w-full">
+            <div class="modal-action">
+                <label for="my-modal-1" class="btn">Close</label>
             </div>
         </div>
     </div>
-
-
+    <input type="checkbox" id="my-modal-2" class="modal-toggle" />
+    <div class="modal">
+        <div class="modal-box">
+            <h2 class="font-bold text-lg">Sertifikat Kompetensi Keahlian Junior Web Pemrogramer</h2>
+            <img src="asset/img/2.jpg" alt="Sertifikat Kompetensi Keahlian Junior Web Pemrogramer" class="w-full">
+            <div class="modal-action">
+                <label for="my-modal-2" class="btn">Close</label>
+            </div>
+        </div>
+    </div>
     <script>
-        function navigateToPage() {
-            const hash = window.location.hash.substring(1) || "home";
-            showPage(hash);
-        }
-        const links = document.querySelectorAll(".nav a");
-
-        links.forEach((link) => {
-            link.addEventListener("click", function(event) {
-                event.preventDefault();
-                document.querySelectorAll(".hero").forEach((section) => {
-                    section.style.display = "none";
-                });
-                const targetId = this.getAttribute("href");
-                document.querySelector(targetId).style.display = "flex";
-            });
-        });
-
-        function showPage(page) {
-            document.querySelectorAll(".page").forEach((content) => {
-                content.classList.remove("active");
-            });
-
-            const pageContent = document.getElementById(page);
-            if (pageContent) {
-                pageContent.classList.add("active");
-            }
-
-            document.querySelectorAll(".nav a").forEach((navLink) => {
-                navLink.classList.remove("font-bold");
-                if (navLink.getAttribute("href").includes(`#${page}`)) {
-                    navLink.classList.add("font-bold");
-                }
-            });
-        }
-
-        window.addEventListener("hashchange", navigateToPage);
-        window.addEventListener("load", navigateToPage);
-
         const roles = [
+            "IT Support",
+            "Troubleshooting hardware & software",
             "Fullstack Developer Laravel",
             "Developer FiveM",
-            "IT Support",
         ];
         let roleIndex = 0;
         const typingText = document.getElementById("typing-text");
